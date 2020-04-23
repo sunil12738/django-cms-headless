@@ -15,6 +15,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
+    url(r'^api/', include('djangocms_spa.urls', namespace='api')),
 ]
 
 urlpatterns += i18n_patterns(

@@ -179,6 +179,7 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'djangocms_spa',
     'mysite'
 ]
 
@@ -209,8 +210,34 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('sidebar_right.html', 'Sidebar Right'),
+    ('test.html', 'Test')
 )
+
+DJANGOCMS_SPA_DEFAULT_TEMPLATE = 'test.html'
+
+DJANGOCMS_SPA_TEMPLATES = {
+    'test.html': {
+        'frontend_component_name': 'test',
+        'partials': ['menu', 'meta', 'footer']
+    },
+    'fullwidth.html': {
+        'frontend_component_name': 'fullwidth',
+        'partials': ['menu', 'meta', 'footer']
+    },
+    'sidebar_left.html': {
+        'frontend_component_name': 'sidebar-left',
+        'partials': ['menu', 'meta', 'footer']
+    },
+    'sidebar_right.html': {
+        'frontend_component_name': 'sidebar-right',
+        'partials': ['menu', 'meta', 'footer']
+    },
+}
+
+DJANGOCMS_SPA_PARTIAL_CALLBACKS = {
+    'menu': 'djangocms_spa.partial_callbacks.get_cms_menu_data_dict'
+}
 
 CMS_PERMISSION = True
 
