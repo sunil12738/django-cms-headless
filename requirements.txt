@@ -47,7 +47,7 @@ djangocms-spa==0.1.22
 djangocms-style==2.3.0
 djangocms-text-ckeditor==3.9.0
 djangocms-video==2.3.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 easy-thumbnails==2.7
 html5lib==1.0.1
 idna==2.9
