@@ -25,7 +25,7 @@ dj-database-url==0.5.0
 Django==1.11
 django-appconf==1.0.4
 django-classy-tags==1.0.0
-django-cms==3.7.2
+django-cms==3.7.4
 django-filer==1.7.0
 django-formtools==2.2
 django-js-asset==1.2.2
